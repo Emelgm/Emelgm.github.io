@@ -12,20 +12,16 @@ git clone git@github.com:Emelgm/Emelgm.github.io.git
 
 ### Pre-requisitos 📋
 
-_Es de utilidad tener instalado un editor de código fuente para facilitar sintaxis y el desarrollo del proeycto, como por ejemplo:_
-
-```
-Visual Studio Code
-```
+_Es de utilidad tener instalado un editor de código fuente para facilitar sintaxis y el desarrollo del proeycto, como por ejemplo:_ `Visual Studio Code`
 
 ### Instalación 🔧
 
 _Una vez clonado el repositorio se requiere crear un entorono virtual para la instalación de librerías y aislar el proyecto._
 
-_Un entorno para este caso puede ser:
+_Un entorno para este caso puede ser:_
 
 ```
-pyp install -m venv nombre_entorno_virtual
+pip install -m venv nombre_entorno_virtual
 ```
 
 _Las librerías están en el archivo **requirements.txt**, ejecutar lo siguiente para instalar los paquetes:_
