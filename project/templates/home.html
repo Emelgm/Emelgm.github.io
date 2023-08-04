@@ -1,0 +1,53 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<header class='row bg-black radio'>
+    <div class='col-md-4'>
+        <img class='perfil' src="{% static 'portfolio/pf.png' %}" alt="">
+    </div>
+    <div class='col-md-8 my-auto texto-white'>
+        <h1>Yerson Emel Gulloso Moyano</h1>
+        <h3 style='color:orange'><em>Data Analyst</em></h3>
+        <p>
+            Soy titulado como ingeniero en telecomunicaciones, con el pasar del
+            tiempo he desarrollado interés, habilidades y conocimientos en el
+            análisis y procesamiento de datos, actualmente estoy fortaleciendo
+            estos conocimientos con autoaprendizaje y proyectos personales para
+            que en un futuro pueda insertarme en el mundo laboral de los datos.
+            Cuento con capacidad de análisis a través de herramientas de software.
+            <br><br>
+            Poseo facilidad de adaptarme, relacionarme y trabajar en equipo, con
+            capacidad analítica, resolución de problemas y deseos de seguir
+            aprendiendo.
+        </p>
+        <a href="{% static 'portfolio/cv_complet.pdf' %}" class='btn btn-warning btn-lg rounded-0 my-3' target='_blank'>Download CV</a>
+    </div>
+</header>
+
+<div class="row my-4 text-center">
+    <h1 style='color:orange'>Projects 
+        <i class="bi bi-briefcase-fill">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-briefcase-fill" viewBox="0 0 16 16">
+                <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z"/>
+                <path d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z"/>
+              </svg>
+        </i>
+    </h1>
+    {% for item in category_list %}
+    <div class="col-md-4 p-4">
+        <div class="card bg-black card-project texto-white">
+            <img class='card-img-top' src="{{ item.image.url }}" alt="{{ item.name }}">
+            <div class="card-body">
+                <h2>{{ item.name }}</h2>
+                <p>{{ item.description }}</p>
+                <a class='btn btn-light btn-sm rounded-0' href="{% url 'project:category' item.id %}">Ver proyectos</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>   
+
+{% endblock content %}

@@ -1,0 +1,22 @@
+body {
+    background: #0f0f0f;
+}
+
+.texto-white {
+    color: white;
+}
+
+.card-project:hover {
+    border: 1px solid black;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px orange;
+}
+
+.perfil {
+    border-radius: 50%;
+    border: 5px solid orange;
+}
+
+.radio {
+    box-shadow: 8px 8px 10px black;
+}

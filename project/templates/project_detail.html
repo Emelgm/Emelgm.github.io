@@ -1,0 +1,9 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="texto-white">
+    <h2>{{ project.name }}</h2>
+    <img class='img-fluid' src="{{ project.image.url }}" alt="project.name">
+    <p>{{ project.description }}</p>
+</div>
+{% endblock content %}
